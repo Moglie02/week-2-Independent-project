@@ -11,6 +11,9 @@ body {
     height: 200px;          
     background-color: blueviolet;
     padding: 2.5rem;
-    
 
+}
+.start-date{
+    padding: 1.5rem;
+    margin: right;
 }
