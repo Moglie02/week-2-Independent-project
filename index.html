@@ -1,65 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-
 <body>
-    <div>
+    <div class="name">     
         <label for="name">Enter Name:</label>
         <input type="text" name="name" id="name">
-    </div>
-
-    <div>
-        <label for="start">Start date:</label>
-        <input type="date" id="myCalendar" name="calendar" value="2020-09-14" min="1900-01-01" max="2500-01-01">
-        <button onclick="getDate()">submit</button>
+    
 
         <div>
+            <label for="start">Start date:</label>
+            <input type="date" id="myCalendar" name="calendar" value="2020-09-14" min="1900-01-01" max="2500-01-01">   
+        <button onclick="getDate()">submit</button>
+
+       <div>
             <input type="radio" value="male" id="male" name="gender">
             <label for="male">male</label>
             <input type="radio" value="female" id="female" name="gender">
             <label for="female">female</label>
-            <input type="radio" value="Non-binary" id ="non-binary" name ="gender">
-            <label for="Non-binary">Non-binary</label>
+            <input type="radio" value="female" id="female" name="gender" checked>
+            <label for="female">non-binary</label>
         </div>
         <div id="output">
         </div>
     </div>
+</div>
 
-    </body>
-    <script>
-        (function(){
-            document.getElementById("name").value = "Moglie";
-        })();
-        function getDate(){
-            var dateString = document.getElementById('myCalendar').value;
-            var gender = document.querySelector('input[name=gender]:checked').value;
-            var name = document.getElementById("name").value;
-            var dateObject = new Date (dateString);
-            var day = dateObject.getDay()
-            var customerDate = "";
-            var akanName = "";
-            var dateMapping = {0:"sunday",1:"monday",2:"tuesday",3:"wednesday",};
-            var femaleMapping ={"sunday": "Akosua","monday":"Adwoa","tuesday"};
-            var maleMapping = {"sunday": "kwasi","monday":"kwadwo","tuesday":"Kwabena","wednesday":"kwaku","thursday":"yaw","Friday":"Kofi","saturday":"Kwame"};
+</body>
 
-            if(gender === "male"){
-                responseMessage(maleMapping);
-        
-            }else if (gender ==="female"){
-                responseMessage(femaleMapping);
-            }else{
-                alert("invalid data")
-            }
-            function responseMessage(valueMapping){
-                innerDay = dateMapping[day];
-                akanName = valueMapping[innerDay];
-                document.getElementById("output").innerText= "Hi"+name+"your Akan name is"+ akanName +"and you were born on"+ innerDay+"!!!!";
-            }
-        }
-    </script>
 </html>

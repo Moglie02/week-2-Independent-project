@@ -1,0 +1,14 @@
+
+body {
+    font-family: Arial;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+.name{
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 50px;
+    height: 200px;          
+
+
+}
